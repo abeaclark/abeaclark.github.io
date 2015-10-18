@@ -1,0 +1,145 @@
+* {
+  text-decoration: none;
+}
+
+body {
+   background-color:#ffffff;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: black;
+}
+
+h1 {
+    margin-left: 25%;
+    display: block;
+    margin-bottom: 0;
+}
+
+.header-background {
+  background-color: gray;
+  height: 9em;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  position: fixed;
+
+}
+
+header img {
+
+    height: 10em;
+    width: 10em;
+    margin-left: 2%;
+    margin-top: 2%;
+    z-index: 1;
+    border-radius: 10%;
+    display: inline-block;
+    float: left;
+}
+
+nav {
+    font-size: .50em;
+    padding-top: 0;
+    margin-top: 0;
+    width: 100%;
+    display: inline-block;
+    clear: both;
+}
+
+nav a {
+    margin-right: 2%;
+    display: inline-block;
+    clear: both ;
+}
+
+
+.nav-image {
+    height: 6em;
+    width: 6em;
+    background-color: #409CC3;
+    float: left;
+    border-radius: 20%;
+
+}
+.nav-image:hover {
+    background-color: black;
+}
+
+
+.nav-image-container {
+    display: inline-block;
+   margin-top: 12em;
+   z-index: -1;
+   margin-left: 15%;
+   width= 100%
+}
+
+.nav-image-div {
+    position: relative;
+    height: 8em;
+    width: 8em;
+    margin-left: 2%;
+    margin-top: 2%;
+    display: inline-block;
+    padding: 0 5%;
+}
+
+.social-logos {
+    position: relative;
+    height: 2em;
+    width: 2em;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: inline-block;
+    padding: 0;
+}
+
+footer {
+  background-color: gray;
+  height: 3em;
+  width: 100%;
+  padding = 0;
+  top: 0;
+  left: 0;
+  position: relative;
+  margin: 3% 0 0 0;
+  float: left;
+  border: none;
+
+}
+
+/******************
+Nav image text TBU
+*******************/
+
+#blog:hover {
+  color: white;
+  content: "BLOG";
+  text-align: center;
+}
+
+#about:hover {
+  color: white;
+  content: "ABOUT";
+  text-align: center;
+}
+
+#contact:hover {
+  color: white;
+  content: "CONTACT";
+  text-align: center;
+}
+
+#projects:hover {
+  color: white;
+  content: "PROJECTS";
+  text-align: center;
+}
+
+# resume:hover {
+  color: white;
+  content: "RESUME";
+  text-align: center;
+}

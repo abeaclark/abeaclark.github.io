@@ -1,0 +1,50 @@
+.header-background {
+  text-align: center;
+}
+
+main {
+  color: black;
+  margin: 15% 0 0 0;
+
+}
+
+#back-button {
+  z-index: 1000;
+  position: relative;
+  margin: 10px 0;
+  left: 0;
+  display: inline;
+  padding: 1em;
+  border-radius: 30%;
+
+
+}
+
+img.back-button{
+  height: 1em;
+  width: 1em;
+}
+
+/*****************
+    blog home page
+*******************/
+ul.thumbnail {
+  margin: 18em 0 0 0;
+
+}
+
+li.thumbnail {
+  width: 45%;
+  display: inline-block;
+  height: 7em;
+  font-size: 2em;
+ /* border: 1px solid gray; */
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+img.thumbnail-pic {
+  width: 5em;
+  height: 5em;
+
+}

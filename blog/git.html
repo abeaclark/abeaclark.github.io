@@ -1,19 +1,24 @@
 <!DOCTYPE html>
+
 <head>
   <title>Learning to code</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
 </head>
 
-<main>
-  <h1>Lesson 1</h1>
-  <h2>The terminal - git - GitHub</h2>
-  <h4>10/5/15</h4>
+<Body>
+  <div id="back-button"><a href="../blog/index.html"><img class="back-button" src="../imgs/back-icon.png"/> Back to Blog home</a></div>
 
-  <section>
+
+  <div class="header-background"> <h2>Lesson 1</h2>
+  <h3>The terminal - git - GitHub</h3>
+  <h4>10/5/15</h4>
+  </div>
+
+  <main><section>
     <h2>The terminal</h2>
     <p>
-      The terminal is a different (actually, the original) way of accessing/running files on your machine and a powerful tool for searching, manipulating, and syncing data. The interface and features are similar to the first computers ever created. Interaction with files does not happen visually (think, mouse and screen), but rather by typing commands and reading the corresponding outputs.
+    The terminal is a different (actually, the original) way of accessing/running files on your machine and a powerful tool for searching, manipulating, and syncing data. The interface and features are similar to the first computers ever created. Interaction with files does not happen visually (think, mouse and screen), but rather by typing commands and reading the corresponding outputs.
     </p>
 
     <p>
@@ -21,22 +26,23 @@
     </p>
 
     <h4>Resources for learning</h4>
-      <a href="https://www.codecademy.com/en/courses/learn-the-command-line">Codecademy "Command line" course (~3hrs)</a></br>
+ <a href="https://www.codecademy.com/en/courses/learn-the-command-line">Codecademy "Command line" course (~3hrs)</a></br>
       <a href="http://cli.learncodethehardway.org/book/">Learning code the hard way course (~5hrs)</a></br>
       <a href="https://talks.devbootcamp.com/an-introduction-to-the-shell">An introduction to the shell / shell programming by Dev Bootcamp (Helps you understand why the terminal is the way it is (1hr)</a></br>
       <a href="http://www.git-tower.com/blog/command-line-cheat-sheet/">Command line cheat sheet from git-tower</a></br>
 
   </section>
 
-  <section>
+    <section>
     <h2>git and GitHub</h2>
     <p>
-      Git is a version control method used by programming teams and individuals. It allows multiple people to collaborate on the same code base while minimizing the chance of duplicated work or lost work due to versions being saved over. Git has empowered the open-source software movement by allowing programmers across the globe to contribute effeciently to the same project.
+    Git is a version control method used by programming teams and individuals. It allows multiple people to collaborate on the same code base while minimizing the chance of duplicated work or lost work due to versions being saved over. Git has empowered the open-source software movement by allowing programmers across the globe to contribute effeciently to the same project.
     </p>
- <p>
-      If you have used dropbox, google docs, or other similar software, you are familiar with some of the concepts in git. Here are the main points:
+
+    <p>
+   If you have used dropbox, google docs, or other similar software, you are familiar with some of the concepts in git. Here are the main points:
     </p>
-      <ul>
+    <ul>
         <li>There is one "Master" version of a document at any given time--this is the most perfect version that is production ready</li>
         <li>New additions to the software or fixes are done on "branches" of the Master version</li>
         <li>A branch is a duplicate of the master version that an individual programmer works from, making changes and additions</li>
@@ -45,21 +51,29 @@
         <li>If there are conflicts (ex: if someone else has made a conflicting edit in the meantime) then a flag is raised and the users can decide which edit to keep</li>
         <li>Uploading changed branches is a two step process so that more than one programmer looks at the code before it is published to the Master (ex: Coder A uploads the changes, Coder B approves the changes and merges them into the Master)</li>
       </ul>
-    <p>
-     GitHub is a cloud-based host for code repositories that follows the git protocol. Instead of hosting the code on a local server, teams can collaborate via the cloud remotely. GitHub can interface with the command line via the prefix "git" and also has a visual online interface. For programmers, the command line interface is vastly superior.
-    </p>
 
-    <h4>Resources for learning</h4>
-    <a href="https://vimeo.com/41027679">What is git video from GitHub (6 min)</a></br>
-    <a href="http://skillcrush.com/2013/02/20/get-started-working-with-git/">Getting started & setup for git by SkillCrush</a></br>
-    <a href="https://confluence.atlassian.com/stash/basic-git-commands-278071958.html#notfound">Basic git commands by Atlassian</a></br>
+        <p>
+        GitHub is a cloud-based host for code repositories that follows the git protocol. Instead of hosting the code on a local server, teams can collaborate via the cloud remotely. GitHub can interface with the command line via the prefix "git" and also has a visual online interface. For programmers, the command line interface is vastly superior.
+        </p>
+
+        <h4>Resources for learning</h4>
+        <a href="https://vimeo.com/41027679">What is git video from GitHub (6 min)</a></br>
+        <a href="http://skillcrush.com/2013/02/20/get-started-working-with-git/">Getting started & setup for git by SkillCrush</a></br>
+        <a href="https://confluence.atlassian.com/stash/basic-git-commands-278071958.html#notfound">Basic git commands by Atlassian</a></br>
+
   </section>
 
-  <section>
+    <section>
     <h2>My thoughts</h2>
     <p>
       The terminal, git, and GitHub are exciting concepts to learn for brand new programmers (like me!). Going through the linked lessons above lead you feel a bit more "at one" with your device. It is exciting to be on the path to becoming a computer power-user and power-coder.
     </p>
 
   </section>
-</main>
+  </main>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/abrahamclark"><img class="social-logos" src="../imgs/linkedin.png"/></a>
+    <a href="https://github.com/abeaclark"><img class="social-logos" src="../imgs/github.png"/></a>
+  </footer>
+</body>
