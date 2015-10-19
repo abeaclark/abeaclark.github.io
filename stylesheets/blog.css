@@ -48,3 +48,33 @@ img.thumbnail-pic {
   height: 5em;
 
 }
+
+/***********************
+  Display attribute post
+************************/
+
+li.tutorial {
+  width: 100%;
+  display: inline-block;
+  clear: both;
+  margin-top: 1%;
+  height: ;
+}
+
+.tutorial-image {
+  width: 30%;
+  display: inline-block;
+  float: left;
+  margin: 0 0 1% 0;
+}
+
+.tutorial-div {
+  width: 50%;
+  display: inline-block;
+  margin: 0 0 0 1%;
+
+}
+
+.explanation {
+  padding: 5px;
+}
