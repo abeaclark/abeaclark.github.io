@@ -3,143 +3,122 @@
 }
 
 body {
-   background-color:#ffffff;
+  background-color: white;
+  padding: 0;
+  margin: 0;
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: green;
+.temp {
+  border: solid red 2px;
 }
 
-h1 {
-    margin-left: 25%;
-    display: block;
-    margin-bottom: 0;
-}
-
-.header-background {
-  background-color: gray;
-  height: 9em;
-  width: 100%;
+.home-header {
   top: 0;
   left: 0;
-  z-index: 20;
-  position: fixed;
-
-}
-
-header img {
-
-    height: 10em;
-    width: 10em;
-    margin-left: 2%;
-    margin-top: 2%;
-    z-index: 1;
-    border-radius: 10%;
-    display: inline-block;
-    float: left;
-}
-
-nav {
-    font-size: .50em;
-    padding-top: 0;
-    margin-top: 0;
-    width: 100%;
-    display: inline-block;
-    clear: both;
-}
-
-nav a {
-    margin-right: 2%;
-    display: inline-block;
-    clear: both ;
-}
-
-
-.nav-image {
-    height: 6em;
-    width: 6em;
-    background-color: #409CC3;
-    float: left;
-    border-radius: 20%;
-
-}
-.nav-image:hover {
-    background-color: black;
-}
-
-
-.nav-image-container {
-    display: inline-block;
-   margin-top: 12em;
-   z-index: -1;
-   margin-left: 15%;
-   width= 100%
-}
-
-.nav-image-div {
-    position: relative;
-    height: 8em;
-    width: 8em;
-    margin-left: 2%;
-    margin-top: 2%;
-    display: inline-block;
-    padding: 0 5%;
-}
-
-.social-logos {
-    position: relative;
-    height: 2em;
-    width: 2em;
-    margin-left: 2%;
-    margin-top: 1%;
-    display: inline-block;
-    padding: 0;
-}
-
-footer {
-  background-color: gray;
+  right: 0;
   height: 3em;
-  width: 100%;
-  padding = 0;
+  margin: 0;
+  position: fixed;
+  padding: 0;
+  background-color: white;
+}
+
+.header-holder {
   top: 0;
   left: 0;
+  right: 0;
+  height: 3em;
+  margin: 0;
   position: relative;
-  margin: 3% 0 0 0;
-  float: left;
-  border: none;
+  padding: 0;
+  z-index: -1;
 
 }
 
-/******************
-Nav image text TBU
-*******************/
+li.home-header-links {
+  text-decoration: none;
+  color: gray;
+  padding: 0 10px;
+  display: inline-block;
+  list-style-image: none;
+  margin: 0;
+}
 
-#blog:hover {
-  color: white;
-  content: "BLOG";
+ul.home-header-ul {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  width: 90%;
   text-align: center;
 }
 
-#about:hover {
-  color: white;
-  content: "ABOUT";
-  text-align: center;
+footer.home-footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  margin: 0;
+  background-color: #333333;
 }
 
-#contact:hover {
-  color: white;
-  content: "CONTACT";
+section.feature {
+  background-color: white;
+  height: 1%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
   text-align: center;
+  padding: 0;
+  clear: both;
+  border-bottom: 10px solid gray;
 }
 
-#projects:hover {
-  color: white;
-  content: "PROJECTS";
+.two {
+  width: 26em;
+  display: inline-block;
+  height: 26em;
+  margin: 3em 1em;
+  vertical-align: top;
   text-align: center;
+  line-height: 23em;
 }
 
-# resume:hover {
-  color: white;
-  content: "RESUME";
-  text-align: center;
+.two-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10%;
 }
+
+.text-holder {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.lrg-text {
+ font-size: 2.5em;
+}
+
+.med-text {
+  font-size: 2em;
+}
+
+.sm-text {
+  font-size: 1em;
+}
+
+a:active, a:link, a:visited {
+  font-color: black;
+}
+
+a:hover {
+  font-color: gray;
+}
+
+
+
+/*************************
+Media queries
+**************************/
