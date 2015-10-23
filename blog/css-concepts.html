@@ -1,6 +1,159 @@
 <!DOCTYPE html>
 
 <head>
+  <title>Learning to code</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<Body>
+
+    <header class="blog-header">
+      <div class="header-background" >
+        <h2>CSS display attribute</h2>
+      </div>
+    </header>
+
+    <span class="social-fixed">
+        <a href="https://www.linkedin.com/in/abrahamclark">
+        <img class="social-logos" src="../imgs/linkedin.png"/>
+      </a>
+
+      <a href="https://github.com/abeaclark">
+        <img class="social-logos" src="../imgs/github.png"/>
+      </a>
+    </span>
+
+      <div class="back-fixed"">
+        <a href="../blog/index.html">
+          <img class="back-button" src="../imgs/back-icon.png"/>
+        </a>
+      </div>
+
+    <div class="blog-header-holder"></div>
+
+  <main>
+    <section class="explanation">
+      <h2>The basics</h2>
+      <p>
+        Elements in HTML are all rectangles of different sizes. The CSS display attribute governs how these rectangles behave in relation to eachother. The display attribute comes with several options, below are the most commonly used:
+      </p>
+    </section>
+
+    <section class="feature">
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/display-inline-example.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+                <li class="explanation">
+                  Elements sit on the same line and do not interrupt the flow of the document
+                </li>
+                <li class="explanation">
+                  This would be used on attributes like &lt;strong&gt; and &lt;em&gt; which are designed to appear within a line of text, but not force it to insert any additional vertical space
+                </li>
+                <li class="explanation">
+                  You can use margin/padding attributes to insert horizontal space
+                </li>
+            </ul>
+        </span>
+      </div>
+
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/display-inline-block-example.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+                <li class="explanation">
+                    Elements sit on the same line, but are treated as individual rectangles
+                </li>
+                <li class="explanation">
+                    Margin/padding attributes would be evaluated for all 4 sides of an object
+                </li>
+            </ul>
+        </span>
+      </div>
+
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/display-block-example.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+              <li class="explanation">
+                Elements are forced onto a new line
+              </li>
+              <li class="explanation">
+                If not width is specified, block elements default to 100%
+                </li>
+            </ul>
+        </span>
+      </div>
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/display-none-example.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+              <li class="explanation">
+                Elements are "hidden" from the screen and will not appear to the viewer or effect subsequent formatting
+              </li>
+            </ul>
+        </span>
+      </div>
+
+  <section class="explanation">
+    <h4>
+      Resources for learning
+    </h4>
+      <a href="https://www.codecademy.com/en/tracks/web">
+        Codecademy HTML/CSS track (~5hrs)
+      </a>
+      <br>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">
+        Mozilla documentation (see the "view live examples" link)
+      </a>
+      <br>
+      <a href="https://css-tricks.com/almanac/properties/d/display/">
+        CSS-tricks.com
+      </a>
+      <br>
+    </section>
+
+  </section>
+
+  </main>
+
+    <footer class="home-footer">
+
+    </footer>
+</body>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+
+<head>
   <title>Learning to Code</title>
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
@@ -20,56 +173,10 @@
     <p>
       Elements in HTML are all rectangles of different sizes. The CSS display attribute governs how these rectangles behave in relation to eachother. The display attribute comes with several options, below are the most commonly used:
     </p>
-    <ul>
-      <li class="tutorial">
-          <img class="tutorial-image" src="../imgs/display-inline-example.png">
-          <div class="tutorial-div">
-            <strong>display: inline</strong>
-              <ul>
-                <li class="explanation">Elements sit on the same line and do not interrupt the flow of the document</li>
-                <li class="explanation">This would be used on attributes like &lt;strong&gt; and &lt;em&gt; which are designed to appear within a line of text, but not force it to insert any additional vertical space</li>
-                <li class="explanation">You can use margin/padding attributes to insert horizontal space</li>
-              </ul>
-          </div>
-        </li>
 
-      <li class="tutorial">
-        <img class="tutorial-image" src="../imgs/display-inline-block-example.png">
-        <div class="tutorial-div">
-            <strong>display: inline-block</strong>
-            <ul>
-                <li class="explanation">Elements sit on the same line, but are treated as individual rectangles</li>
-                <li class="explanation">Margin/padding attributes would be evaluated for all 4 sides of an object</li>
-            </ul>
-        </div>
-      </li>
 
-      <li class="tutorial">
-        <img class="tutorial-image" src="../imgs/display-block-example.png">
-        <div class="tutorial-div">
-          <strong>display: block</strong>
-          <ul>
-            <li class="explanation">Elements are forced onto a new line</li>
-            <li class="explanation">If not width is specified, block elements default to 100%</li>
-          </ul>
-        </div>
-      </li>
 
-      <li class="tutorial">
-        <img class="tutorial-image" src="../imgs/display-none-example.png">
-        <div class="tutorial-div">
-          <strong>display: none</strong>
-          <ul>
-            <li class="explanation">Elements are "hidden" from the screen and will not appear to the viewer or effect subsequent formatting</li>
-          </ul>
-        </div>
-      </li>
-    </ul>
 
-    <h4>Resources for learning</h4>
-      <a href="https://www.codecademy.com/en/tracks/web">Codecademy HTML/CSS track (~5hrs)</a></br>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">Mozilla documentation (see the "view live examples" link)</a></br>
-      <a href="https://css-tricks.com/almanac/properties/d/display/">CSS-tricks.com</a></br>
 
   </section>
 
@@ -80,3 +187,4 @@
     <a href="https://github.com/abeaclark"><img class="social-logos" src="../imgs/github.png"/></a>
   </footer>
 </body>
+ -->
