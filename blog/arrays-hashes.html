@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Learning to code</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<Body>
+
+    <header class="blog-header">
+      <div class="header-background" >
+        <h2>Arrays and Hashes</h2>
+      </div>
+    </header>
+
+    <span class="social-fixed">
+        <a href="https://www.linkedin.com/in/abrahamclark">
+        <img class="social-logos" src="../imgs/linkedin.png"/>
+      </a>
+
+      <a href="https://github.com/abeaclark">
+        <img class="social-logos" src="../imgs/github.png"/>
+      </a>
+    </span>
+
+      <div class="back-fixed"">
+        <a href="../blog/index.html">
+          <img class="back-button" src="../imgs/back-icon.png"/>
+        </a>
+      </div>
+
+    <div class="blog-header-holder"></div>
+
+  <main>
+    <section class="explanation">
+      <h2>Hash or Array?</h2>
+      <p>
+        Hashes and arrays are important data structures in programming. But, what exactly is the difference between a hash and an array? Both structures are used to organize data for easy recall and manipulation. The structure of each makes it especially helpful for certain applications. Here is a quick overview of the differences:
+      </p>
+    </section>
+
+    <section class="feature">
+       <div class="two example">
+          <span class="sm-text">
+            <span class="med-text">
+              Arrays
+            </span>
+            <ul>
+                <li class="explanation">
+                  List is ordered and each data point is assigned an index number
+                </li>
+                <li class="explanation">
+                  Index's start at 0 and correspond to the order that items were added to the array (Note that there are methods by which you can add items at the beginning, end, or middle of an array)
+                </li>
+                <li class="explanation">
+                  You can call a given value from the array by specifying its index number like this: array[7]
+                </li>
+                <li class="explanation">
+                  Great for storing data where order matters (ex: stock prices over time) or where the exact meaning of any individual data point is not extremely important to the whole (ex: recording temperature each second in order to display a graph of the temperature change in a given day -- each individual second will not be examined individually)
+                </li>
+            </ul>
+        </span>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <span class="med-text">
+              Hashes
+            </span>
+            <ul>
+                <li class="explanation">
+                  List is unordered and each data point is assigned a corresponding key (think of it as a name to remember the data point by, like "password" or "username")
+                </li>
+                <li class="explanation">
+                  Hashes are organized into pairs that looke like this: hash = [key => data]
+                </li>
+                <li class="explanation">
+                  You can call on a piece of data in the hash like this hash[key] which will return "data"
+                </li>
+                <li class="explanation">
+                  Great for storing data that has individual significance such as usernames and passwords but that isn't sequentially important
+                </li>
+            </ul>
+        </span>
+      </div>
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/array_hash_together.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+                 <li class="explanation">
+                  This examples shows possible uses for an array and a hash. The array is used to represent a next-7-day forecast and the hash stores relevant contact information
+                </li>
+                <li class="explanation">
+                  It would not make sense to add a key like "Thursday" or "May24" to the temperature_forecast array because you know that it corresponds to the next 7 days and you have more flexibility if you know the forecast relative to today
+                </li>
+                <li class="explanation">
+                  The hash makes more sense for the contact information because instead of having to remember that "Website" is the second element, you can just use the :website key
+                </li>
+
+            </ul>
+        </span>
+      </div>
+    </section>
+
+  <section class="explanation">
+    <h4>
+      Resources for learning
+    </h4>
+      <a href="http://www.sitepoint.com/guide-ruby-collections-ii-hashes-sets-ranges/">
+        Sitepoint: A guide to Ruby collections
+      </a>
+      <br>
+      <a href="http://www.xyzpub.com/en/ruby-on-rails/3.2/ruby-array-und-hash.html">
+        Arrays and Hashes by xyzpub.com
+      </a>
+    </section>
+
+  </section>
+
+  </main>
+
+    <footer class="home-footer">
+
+    </footer>
+</body>
