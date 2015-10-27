@@ -13,7 +13,31 @@ header {
   color: white;
 }
 
+table {
+  display: inline;
+}
+
 table tr td {
   padding: 10px;
   border: gray 1px solid;
+}
+
+form {
+  display: inline-block;
+}
+
+#add {
+  display: inline-block;
+}
+
+#refresh {
+  display: inline-block;
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+
 }

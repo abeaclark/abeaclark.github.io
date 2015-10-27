@@ -3,7 +3,6 @@
   <title>STOCK PICKS</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="stock.js"></script>
-    <script src="add_sub.js"></script>
   <link rel="stylesheet" type="text/css" href="stock.css">
 
 </head>
@@ -14,15 +13,18 @@
 
   <main>
 
+    <div class="container">
+      <form>
+        <input onfocus="if(this.value == 'Ticker') { this.value = ''; }" default="Ticker" style="text-transform:uppercase" id="ticker_input" value="Ticker"></input>
+      </form>
+      <button id="add" default="yes">Add</button>
+    </div>
+    <div class="container">
+      <button id="refresh">Refresh</button>
+    </div>
 
-    <form>
-      <input type="text" id="ticker_input" value="Ticker"></input>
-    </form>
-    <button id="add" default="yes">Add</button>
-    <button id="remove">Remove</button>
-    <button id="refresh">Refresh</button>
-
-    <table class="data">
+    <div class="container">
+      <table class="data">
       <tr id="title_row">
 
         <td>
@@ -38,15 +40,35 @@
         </td>
 
         <td>
-          1-day
+          % 52wk high
         </td>
 
+        <td>
+          1-year
+        </td>
+
+        <td>
+          6-month
+        </td>
+
+        <td>
+          3-month
+        </td>
+
+        <td>
+          1-week
+        </td>
+
+        <td>
+          Today
+        </td>
       </tr>
 
       <tr>
 
 
     </table>
+  </div class="container">
 
   </main>
 
