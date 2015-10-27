@@ -21,16 +21,19 @@ console.log(year_ago)
 
 // Default button
 
-$("#add").keyup(function(event){
-    if(event.keyCode == 13){
-        $("#add").click();
-    }
-});
+   $("input").bind("keydown", function(event) {
+      var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+      if (keycode == 13) {
+         document.getElementById('ticker_input').click();
+         return false;
+      } else  {
+         return true;
+      }
+   }); // end of function
 
 
 
-
-// ADD SUB
+// ADD / SUB
 
 var ticker_array = [];
 
@@ -40,13 +43,14 @@ $(document).ready(function () {
 
   $('#add').click(function() {
     ticker = $("#ticker_input").val().toUpperCase();
-    var html_to_append = '<tr class="row" id="' + ticker +  '_row"><td><button class="remove_button" id="' + ticker + '_remove">Remove</button></td><td class="ticker" id="' + ticker + '">' + ticker + '</td><td id="' + ticker + '_price">Current price</td><td id="' + ticker + '_52wk">% 52wk high</td><td id="' + ticker + '_1yr">1-year</td><td id="' + ticker + '_6mo">6-month</td><td id="' + ticker + '_3mo">3-month</td><td id="' + ticker + '_1wk">1-week</td><td id="' + ticker + '_1day">1-day</td></tr>';
+    var html_to_append = '<tr class="row" id="' + ticker +  '_row"><td><button class="remove_button" id="' + ticker + '_remove">Remove</button></td><td class="ticker" id="' + ticker + '">' + ticker + '</td><td id="' + ticker + '_price"></td><td id="' + ticker + '_52wk"></td><td id="' + ticker + '_1yr"></td><td id="' + ticker + '_6mo"></td><td id="' + ticker + '_3mo"></td><td id="' + ticker + '_1wk"></td><td id="' + ticker + '_1day"></td></tr>';
 
 
     $("table").append(html_to_append);
     $("#" + ticker_array[-1] + "row").html(ticker);
     ticker_array.push(ticker);
     console.log(ticker_array);
+    $('#ticker_input').val("");
 
   }); // end add-button.click
 
@@ -135,7 +139,7 @@ $(document).ready(function () {
 
              $("#" + value + "_3mo").html(((current_price / parseFloat(data2.results[38].close) - 1) * 100).toFixed(2) + "%");
 
-             $("#" + value + "_1wk").html(((current_price / parseFloat(data2.results[data2.results.length - 2].close) - 1) * 100).toFixed(2) + "%");
+             $("#" + value + "_1wk").html(((current_price / parseFloat(data2.results[data2.results.length - 3].close) - 1) * 100).toFixed(2) + "%");
 
 
             }, //end success function
