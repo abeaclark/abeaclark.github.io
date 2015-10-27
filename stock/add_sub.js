@@ -9,7 +9,7 @@ $(document).ready(function () {
 
   $('#add').click(function() {
     ticker = $("#ticker_input").val().toUpperCase();
-    var html_to_append = '<tr class="row" id="' + ticker +  '_row"><td><button class="remove_button" id="' + ticker + '_remove">Remove</button></td><td class="ticker" id="' + ticker + '">' + ticker + '</td><td id="' + ticker + '_price">Current price</td><td>1-day</td></tr>';
+    var html_to_append = '<tr class="row" id="' + ticker +  '_row"><td><button class="remove_button" id="' + ticker + '_remove">Remove</button></td><td class="ticker" id="' + ticker + '">' + ticker + '</td><td id="' + ticker + '_price"></td><td>1</td></tr>';
 
 
     $("table").append(html_to_append);
