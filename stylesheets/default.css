@@ -140,6 +140,11 @@ div.fixed-down {
 }
 
 
+.social-logos {
+  height: 40px;
+  width: 40px;
+}
+
 
 /*************************
 Media queries
