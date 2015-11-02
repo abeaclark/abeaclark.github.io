@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Learning to code</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<Body>
+
+    <header class="blog-header">
+      <div class="header-background" >
+        <h2>Enumerable methods: #cycle</h2>
+      </div>
+    </header>
+
+    <span class="social-fixed">
+        <a href="https://www.linkedin.com/in/abrahamclark">
+        <img class="social-logos" src="../imgs/linkedin.png"/>
+      </a>
+
+      <a href="https://github.com/abeaclark">
+        <img class="social-logos" src="../imgs/github.png"/>
+      </a>
+    </span>
+
+      <div class="back-fixed"">
+        <a href="../blog/index.html">
+          <img class="back-button" src="../imgs/back-icon.png"/>
+        </a>
+      </div>
+
+    <div class="blog-header-holder"></div>
+
+  <main>
+    <section class="explanation">
+      <h2>Enumerable methods</h2>
+      <p>
+        Enumerable methods are a helpful tool in Ruby, but they can be pretty dificult to understand the first time you use them. Luckily, we have the <a href="http://ruby-doc.org/core-2.2.3/Enumerable.html">Ruby Docs</a> as a resource to understand these methods better. However, even after reading these documents, the methods can be difficult to understand. The snippet below if from the Ruby Docs. I have explained the "cycle" enumerable method to the right.
+      </p>
+    </section>
+
+    <section class="feature">
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/cycle-example.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+                 <li class="explanation">
+                  #cycle iterates through a collection similar to #each, but with a few manjor differences
+                </li>
+                <li class="explanation">
+                  #cycle takes one argument that specifies how many times you want it to iterate through a collection (I think of it as marrying the #times and #each methods)
+                </li>
+                <li class="explanation">
+                  If no argument is passed, #cycle will continue to iterate through indefinitely (yikes, infinite loop!)
+                </li>
+                <li class="explanation">
+                  As you would expect, the block is evaluated during each iteration
+                </li>
+
+            </ul>
+        </span>
+      </div>
+    </section>
+
+  <section class="explanation">
+    <h4>
+      Resources for learning
+    </h4>
+      <a href="http://www.sitepoint.com/guide-ruby-collections-iii-enumerable-enumerator/">
+        Sitepoint: Enumerables
+      </a>
+
+    </section>
+
+  </section>
+
+  </main>
+
+    <footer class="home-footer">
+
+    </footer>
+</body>
