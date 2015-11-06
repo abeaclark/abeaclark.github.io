@@ -1,5 +1,6 @@
 * {
   text-decoration: none;
+  font-family: tahoma;
 }
 
 body {
@@ -144,6 +145,10 @@ div.fixed-down {
 .social-logos {
   height: 40px;
   width: 40px;
+}
+
+.logo {
+  max-height: 60px;
 }
 
 
