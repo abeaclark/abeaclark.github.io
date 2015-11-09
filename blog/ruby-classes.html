@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Learning to code</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<Body>
+
+    <header class="blog-header">
+      <div class="header-background" >
+        <h2>Ruby classes</h2>
+      </div>
+    </header>
+
+    <span class="social-fixed">
+        <a href="https://www.linkedin.com/in/abrahamclark">
+        <img class="social-logos" src="../imgs/linkedin.png"/>
+      </a>
+
+      <a href="https://github.com/abeaclark">
+        <img class="social-logos" src="../imgs/github.png"/>
+      </a>
+    </span>
+
+      <div class="back-fixed"">
+        <a href="../blog/index.html">
+          <img class="back-button" src="../imgs/back-icon.png"/>
+        </a>
+      </div>
+
+    <div class="blog-header-holder"></div>
+
+  <main>
+    <section class="explanation">
+      <h2>Ruby Classes</h2>
+      <p>
+        So far, we have three major data structures:
+      </p>
+      <ol>
+        <li class="explanation"><h4>Arrays:</h4> Useful for ordered data that does not need to be closely associated to a pair (ex: stock prices, temperature over time, names on a waiting list queue, etc.)</li>
+        <li class="explanation"><h4>Hashes:</h4> Useful for key:value pairs that need to be associated (ex: usernames and passwords, label and value, etc.)</li>
+        <li class="explanation"><h4>Classes:</h4> Useful for assigning multiple values and specialized methods to a data structure (Ex: users will have name, username, password, statistics about usage, metadata, and will need specialized methods such as printing profile information, deleting posts, etc.)</li>
+      </ol>
+      <br>
+
+        <p>
+        Let's look deeper into classes. Classes are extremely versatile and widely used. You've already been using classes that are built into the Ruby language such as "string" "integer" "object" and others. Did you know these were classes?
+      </p>
+      <p>
+        Remember how there are some methods you can call on integers that you can't call on strings? (ex: #even? ,  #round(), etc.). This is because the makers of the Ruby language have defined certain methods that can only be used within the "Integer" class. They have set the "Integer" class apart from other classes because there are certain methods that only make sense to call on this class (you wouldn't want to call the #round method on a string, it wouldn't make any sense!)
+      </p>
+
+      <p>
+       Classes are hierarchal (like a family tree). The highest level of class is object. Classes inherit methods and other characteristics from parent classes. A class above the current class is called a "superclass". See the example below that clarifies the hierarchal structure.
+      </p>
+
+    </section>
+
+    <section class="explanation">
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/class_hierarchy.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+                 <li class="explanation">
+                  At the left we can see the #class, #superclass, and #ancestors methods applied to both a string and an integer
+                </li>
+                <li class="explanation">
+                  The class function reveals the class of the object it is called upon (in the case, "String" and "Fixnum")
+                </li>
+                <li class="explanation">
+                  The superclass method reveals the next step up in the class structure; When called on "String", it returns "Object", when called on "Fixnum", it returns "Integer"
+                </li>
+                <li class="explanation">
+                  The ancestor method reveals the entire hierarchy back to BasicObject
+                </li>
+
+            </ul>
+        </span>
+      </div>
+    </section>
+    <section class="explanation">
+      <p>
+       Classes often have attributes that need to be assigned, retrieved, or overwritten. Instead of needing to write separate methods each time you want to read and/or write a value to a class, Ruby has this functionality built into the attr_reader, attr_writer, and attr_accessor tags. The reader and writer tags give you access to read-only and write-only priveledges, and the accessor tag allows you to read/write.
+      </p>
+
+      <p>
+        The example below shows a usage case of a Class called "User" and demonstrates the above-mentioned attribute tags
+      </p>
+    </section>
+
+      <section class="explanation">
+
+      <div class="two">
+          <div class="text-holder">
+            <img class="two-image" src="../imgs/classes_example.png">
+          </div>
+      </div>
+
+       <div class="two example">
+          <span class="sm-text">
+            <ul>
+                 <li class="explanation">
+                  The username is defined as a read-only variable because we don't want people to be able to change their username
+                </li>
+                <li class="explanation">
+                  Some attributes such as full_name, age, and interests are set as accessor variables so that the user can edit them later
+                </li>
+                <li class="explanation">
+                  Line 43 through 47 show how to edit an accessor variable
+                </li>
+                <li class="explanation">
+                  Line 49 shows that methods described inside a class cannot be used on another class (#interests is defined inside the User class, not the String class)
+                </li>
+
+            </ul>
+        </span>
+      </div>
+    </section>
+
+  <section class="explanation">
+    <h4>
+      Resources for learning
+    </h4>
+      <a href="http://phrogz.net/programmingruby/tut_classes.html">
+        Programming Ruby, The Pragmatic Programmer's Guide
+      </a>
+
+    </section>
+
+  </section>
+
+  </main>
+
+    <footer class="home-footer">
+
+    </footer>
+</body>
