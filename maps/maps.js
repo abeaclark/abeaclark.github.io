@@ -22,7 +22,7 @@ function set_markers(map) {
     scaledSize: icon_size,
     origin: icon_origin,
     anchor: icon_anchor
-};
+  };
 
   var fried_egg_icon = {
     url: '../imgs/fried_egg.svg',
@@ -46,26 +46,26 @@ function set_markers(map) {
     };
 
   var sweets = [
-    ['Mitchell\'s Ice Cream', 37.7442733,-122.4930328],
-    ['Smitten Ice Cream', 37.7764741,-122.4944163],
-    ['Bi-Rite Creamery', 37.7617011,-122.4958824],
-    ['Anthony\'s Cookies', 37.7503175,-122.4904443],
-    ['Zanze\'s Cheesecake', 37.7299995, -122.5399102]
+    ['Mitchell\'s Ice Cream', 'ChIJQVAijUJ-j4ARfJZLVQMz1Dw', 'Always busy and parking is tough, but the Chocolate Chip Ice Cream is amazing!'],
+    ['Smitten Ice Cream', 'ChIJ70taCKKAhYAR5IMmYwQT4Ts', 'Small portions, but the richness of Gelato'],
+    ['Bi-Rite Creamery', 'ChIJh1wqPBh-j4ARliLVoyr5W_c', 'Best Peanut Brittle Ice Cream I have ever tasted. Across the street from Dolores Park, which has a great view of the city.'],
+    ['Anthony\'s Cookies', 'ChIJtYlXHEF-j4ARcvUDxWd2c8Q', 'Good, fresh cookies at a reasonable price.'],
+    ['Zanze\'s Cheesecake', 'ChIJVaXle7h9j4AROQGRgHfjDPU', 'San Francisco\'s best Cheesecake. Light and fluffy. Open only certain days of the week and sometimes sell out.']
   ,ice_cream_cone_icon]; //end sweets
 
   var breakfast = [
-    ['Higher Grounds Coffee House', 37.7344052,-122.4359002],
-    ['Farm:Table', 37.7875321,-122.4162266]
+    ['Higher Grounds Coffee House', 'ChIJmb4VnmR-j4ARzver3HK6gKU', 'Great omletes and crepes for breakfast. Hardly any seating and cash only.'],
+    ['Farm:Table', 'ChIJWyb_ipGAhYARbaiIO1cGIrw', 'Always busy and hardly any seating, but the fruit toast with Marscapone is great.']
   ,fried_egg_icon]; //end breakfast
 
   var lunch = [
-    ['Garaje', 37.7817808,-122.3982832],
-    ['Ike\'s Place', 37.7649672,-122.4327321]
+    ['Garaje', 'ChIJ6Z5t1n6AhYARaY_WxdP44r0', 'Cash only, has a mexi-american feel with some San Fancisco flavor like crab cakes. Cool atmosphere.'],
+    ['Ike\'s Place', 'ChIJGVMVbRx-j4ARMUOA74orYsI', 'Heralded as the best sandwich shop in the city.']
   ,hamburger_icon];
 
   var dinner = [
-    ['Marnee Thai', 37.765151,-122.4688046],
-    ['Umami Burger', 37.7972857,-122.4373629]
+    ['Marnee Thai', 'ChIJRQiL_VyHhYARDJPvbliHh-o', 'The Pad Thai is unrivaled.'],
+    ['Umami Burger', 'ChIJ5R8Cn9qAhYAR97rbI4enNm8', 'Yummy burgers with thin cut fries. A bit more expensive but worth it for a classing burger experience.']
   ,dinner_icon];
 
   var location_types = [
@@ -74,26 +74,62 @@ function set_markers(map) {
   lunch,
   dinner]; //end location_types
 
+  // var infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
 
 // double iteration for loop. Looks through array of location types. Then iterates through each location inside the type, creating a marker for each.
 
   for (var index1 = 0; index1 < location_types.length; index1++) {
     var current_location_type = location_types[index1]
 
-    for (var index2 = 0; index2 < current_location_type.length; index2++) {
-        var current_location = current_location_type[index2];
+    for (var index2 = 0; index2 < current_location_type.length -1; index2++) {
 
-        var current_icon = current_location_type[current_location_type.length - 1];
-        console.log(current_icon);
-        var marker = new google.maps.Marker({
-          position: {lat: parseFloat(current_location[1]), lng: parseFloat(current_location[2])},
-          map: map,
-          icon: current_icon,
-          title: location[0],
-        }); // end new google marker
+      var current_location = current_location_type[index2];
+      var location_ID = current_location[1];
+      var current_icon = current_location_type[current_location_type.length - 1];
+
+      service.getDetails({
+        placeId: location_ID
+        }, function(place, status) {
+
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+            var marker = new google.maps.Marker({
+              position: place.geometry.location,
+              map: map,
+              icon: current_icon,
+              title: location[0],
+            }); // end new google marker
+
+            var current_description = current_location[2];
+              console.log(current_description);
+            var marker_content = '<div style="font-weight: bold;">' + place.name + '</div> <br> <div style="font-weight: normal; width: 8em;">' + current_description + '</div>'
+
+            var infowindow = new google.maps.InfoWindow();
+
+            console.log(marker_content)
+
+            google.maps.event.addListener(marker, 'click', function() {
+              // return function() {
+                infowindow.setOptions({
+                  content: marker_content
+                });
+                infowindow.open(map, marker);
+              });
+                // infowindow.setContent(marker_content);
+                // infowindow.open(map, marker);
+              // }
+              // })(marker, marker_content));
+
+          }; // end if status
+        }); //end service, get details
+
 
     }; // end for loop
   }; //end outer for loop
 
+
 }; //end set_markers function
+
+
 

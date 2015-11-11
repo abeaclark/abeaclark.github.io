@@ -5,8 +5,9 @@
   <title>My digs</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="maps.js"></script>
+  // <script src="maps_class.js"></script>
   <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqEVzxYL120RHxiDp0gANWkk-GyHfD0Z8&libraries=places&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqEVzxYL120RHxiDp0gANWkk-GyHfD0Z8&signed_in=true&libraries=places&callback=initMap">
     </script>
   <link type="text/css" rel="stylesheet" href="maps.css">
 </head>
@@ -14,6 +15,24 @@
 
 <div id="map">
   GOOGLE MAP
+</div>
+<div class="right_overlay">
+  <div class="right_container">
+    <div class="title">
+      Title of Restaurant
+    </div>
+    <div class="photo">
+      <img class="right_thumbnail" src="https://lh5.googleusercontent.com/-ClSXSsDLWOw/UhespQeZSKI/AAAAAAAANSA/aozyRh2SetY/s455-k-no/">
+    </div>
+    <div class="description">
+      Description here
+    </div>
+    <div class="contact">
+      Phone
+      Website
+      Rating
+    </div>
+  </div>
 </div>
 </body>
 </html>
