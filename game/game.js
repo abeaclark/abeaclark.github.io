@@ -45,7 +45,7 @@ var random_index = function() {
 
 
 function update_answer() {
-  answer = common_idioms[random_index()];
+  answer = common_idioms[random_index()].toUpperCase();
 };
 
 // create a function that alters the string to replace all letters with a different symbol (like a question mark, but leaves spaces). Assign this to cipher
@@ -59,7 +59,7 @@ function update_cipher() {
 
 // create a function that requests a guess of a letter and assigns it to current guess
 function update_current_guess() {
-current_guess = $("#guess").val();
+current_guess = $("#guess").val().toUpperCase();
 console.log(current_guess)
 right_or_wrong();
 notify_right_or_wrong();
@@ -94,7 +94,7 @@ function compare_letter_and_replace() {
 // create a function called guess that accepts a string and compares it to the current answer. If it is the same, "you  win!" if it is different, add the string to the wrong guesses array.
 
 function update_main_guess() {
-main_guess = window.prompt("Enter your guess for the saying here","...type the phrase")
+main_guess = window.prompt("Enter your guess for the saying here","...type the phrase").toUpperCase();
 validate_main_guess();
 };
 
@@ -142,7 +142,7 @@ function new_game() {
 function you_win() {
   cipher = answer
   $( ".bottom p" ).html(cipher);
-  $("body").append($win).mousedown(function() {
+  $(".main-container").append($win).mousedown(function() {
     $(".overlay").hide()
     });
 }
@@ -150,7 +150,7 @@ function you_win() {
 function you_lose() {
   cipher = answer
   $( ".bottom p" ).html(cipher);
-  $("body").append($lose).mousedown(function() {
+  $(".main-container").append($lose).mousedown(function() {
   $(".overlay").hide()
   });
 }

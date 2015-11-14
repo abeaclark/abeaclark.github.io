@@ -6,6 +6,10 @@ font-family: tahoma;
 font-size: 1.3em;
 }
 
+body {
+  text-align: center;
+}
+
 .main-container {
 width: 100%;
 height: 100vh;
@@ -151,3 +155,29 @@ left: 0;
 width: 100%;
 height: 100vh;
 }
+
+
+/**********************
+  MEDIA QUERIES
+**********************/
+
+@media screen and (min-width: 480px) {
+  .main-container {
+    width: 60%;
+    height: 100vh;
+    font-size: .4em;
+    position: relative;
+  }
+
+  img {
+    width: 10em;
+  }
+
+
+#main_guess {
+  position: absolute;
+  top: 1em;
+  right: 8em;
+}
+}
+
