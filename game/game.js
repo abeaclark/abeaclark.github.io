@@ -179,13 +179,19 @@ $( ".result" ).click($win.show);
 
 
 
-// new_game();
-// console.log(cipher);
-// update_current_guess();
-// console.log(cipher);
+// REFLECTION
 
-// JQUERY FUNCTIONALITY
+// What was the most difficult part of this challenge?
+//   I Spent a decent amount of time trouble shooting different aspects of Jquery (I'm interested in it for some other things I am building / want to build, so it was worth my time). One thing that was hanging me up for a little while was why my jquery code wasn't working, but it was because it had loaded before the DOM. I moved the Jquery link to the bottom of the html page, and then it worked.
 
+// What did you learn about creating objects and functions that interact with one another?
+//   I still need to learn more about this I think. It was hard for me to see how to apply objects here. I'm not super clear on best practices for a lot of things including separating functions (for example do you need to pass the function arguments, or do you just set it up so that it takes in the appropriate global variables? I opted for global variables.)
+
+// Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
+//   I still need to refactor, but I was pretty tired after getting this far. I did learn lots of new functions and Jquery stuff along the way.
+
+// How can you access and manipulate properties of objects?
+//   in javascript there is the getObjectByID and similar functions. I opted for the easier jquery implementation here.
 
 
 
