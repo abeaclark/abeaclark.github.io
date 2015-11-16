@@ -14,25 +14,34 @@
 
 // create a function called new game that clears out the wrong guesses, and runs the new random number function, etc.
 
-// GIPHY API
-
-
-var api_request = $.get("http://api.giphy.com/v1/gifs/random?q=win&api_key=dc6zaTOxFJmzC&limit=5");
-
-var win_img_ref = api_request.done(function(data) { data.data.fixed_height_downsampled_url});
-
-
-
-var answer = ""
-var main_guess = ""
-var cipher = ""
-var wrong_guesses = [];
-var current_guess = "";
-var $win = $('<div class="overlay result">YOU WIN!<div class="gif"><img src="' + win_img_ref + '"></div></div><div class="overlay shade"></div>');
-var $lose = $('<div class="overlay result">YOU LOSE!</div><div class="overlay shade"></div>');
-
 //Define an array of common idioms
-var common_idioms = ["A bitter pill","A dime a dozen","Ace in the hole","Achilles' heel","Actions speak louder than words","Add insult to injury","All ears","All thumbs","An arm and a leg","Apple of discord","At the drop of a hat","Back to the drawing board","Ball is in your court","Barking up the wrong tree","Basket case","Beat around the bush","Best of both worlds","Bite off more than one can chew","Bite the bullet","Bite the dust","Break a leg","Burn the midnight oil","Bust one's chops","By the seat of one's pants","By the skin of one's teeth","Call it a day","Cat nap, Chalk up","Chomp at the bit","Chew the fat","Chink in your armor","Clam up","Cold shoulder","Couch potato","Cut a rug","Cut the cheese","Cut the mustard","Don't have a cow ","Drop a dime ","Fit as a fiddle","For a song","From A to Z","To make from scratch","Get bent out of shape","Have a blast","Have eyes in the back of one's head ","Hit the road ","Hit the sack ","Let the cat out of the bag","Kick the bucket","No horse in this race","Off your rocker","Off the hook","Piece of cake","Pulling my leg","Pushing up daisies","Put the cat among the pigeons","Right as rain","Shoot the breeze","Sleep with the fishes","Spill the beans","Take the cake","Through thick and thin","Pick your nose","Tie one on","Steal your thunder","Under the weather","Whole nine yards","X Marks the spot"]
+var common_idioms = ["A bitter pill","A dime a dozen","Ace in the hole","Achilles' heel","Actions speak louder than words","Add insult to injury","All ears","All thumbs","An arm and a leg","Apple of discord","At the drop of a hat","Back to the drawing board","Ball is in your court","Barking up the wrong tree","Basket case","Beat around the bush","Best of both worlds","Bite off more than one can chew","Bite the bullet","Bite the dust","Break a leg","Burn the midnight oil","Bust one's chops","By the seat of one's pants","By the skin of one's teeth","Call it a day","Cat nap, Chalk up","Chomp at the bit","Chew the fat","Chink in your armor","Clam up","Cold shoulder","Couch potato","Cut a rug","Cut the cheese","Cut the mustard","Don't have a cow","Drop a dime ","Fit as a fiddle","For a song","From A to Z","To make from scratch","Get bent out of shape","Have a blast","Have eyes in the back of your head","Hit the road","Hit the sack","Let the cat out of the bag","Kick the bucket","No horse in this race","Off your rocker","Off the hook","Piece of cake","Pulling my leg","Pushing up daisies","Put the cat among the pigeons","Right as rain","Shoot the breeze","Sleep with the fishes","Spill the beans","Take the cake","Through thick and thin","Pick your nose","Tie one on","Steal your thunder","Under the weather","Whole nine yards","X Marks the spot"]
+
+//Define an array of win gifs
+var win_gifs = [
+"http://giphy.com/embed/aurUBBayxC55m",
+"http://giphy.com/embed/PzztizcE7jvBS",
+"http://giphy.com/embed/3oEduKVQdG4c0JVPSo",
+"http://giphy.com/embed/9ZvFhDkaAfyLe",
+"http://giphy.com/embed/l41lYCDgxP6OFBruE",
+"http://giphy.com/embed/eoxomXXVL2S0E",
+"http://giphy.com/embed/10ERZqYioLWJ6U",
+"http://giphy.com/embed/iPTTjEt19igne",
+"http://giphy.com/embed/xNBcChLQt7s9a",
+"http://giphy.com/embed/PLHWlk6TmWQx2"
+]
+
+//Define an array of lose gifs
+var lose_gifs = [
+"http://giphy.com/embed/3oEdv8Qtdp1Wq4w7ok",
+"http://giphy.com/embed/XZnOyLFlsNIoE",
+"http://giphy.com/embed/Z2n51rH9rybkY",
+"http://giphy.com/embed/xFc6DCQ7uqBlC",
+"http://giphy.com/embed/1fXfKOSipT83e",
+"http://giphy.com/embed/1To6EN9SCbUS4",
+"http://giphy.com/embed/5vNjCeojZMTde",
+"http://giphy.com/embed/5zHT0iIUj0QRG"
+]
 
 var images =[
 "../imgs/hangman/hangman-0.png",
@@ -43,6 +52,29 @@ var images =[
 "../imgs/hangman/hangman-5.png",
 "../imgs/hangman/hangman-6.png",
 ]
+
+
+var answer = ""
+var main_guess = ""
+var cipher = ""
+var wrong_guesses = [];
+var current_guess = "";
+
+
+var $win = $('<div class="overlay_win result">YOU WIN!<div class="gif"><iframe src="' + generate_win_gif() + '"></iframe></div></div><div class="overlay_win shade"></div>');
+
+var $lose = $('<div class="overlay_lose result">BUMMER!<div class="gif"><iframe src="' + generate_lose_gif() + '"></iframe></div></div><div class="overlay_lose shade"></div>');
+
+
+function generate_win_gif() {
+  return win_gifs[Math.floor(Math.random() * win_gifs.length)];
+};
+
+function generate_lose_gif() {
+  return lose_gifs[Math.floor(Math.random() * lose_gifs.length)];
+};
+
+
 
 
 // Create a function that generates a random index number within an array of idioms
@@ -150,17 +182,19 @@ function new_game() {
 
 function you_win() {
   cipher = answer
+  $(".overlay_win").show()
   $( ".bottom p" ).html(cipher);
   $(".main-container").append($win).mousedown(function() {
-    $(".overlay").hide()
+    $(".overlay_win").hide()
     });
 }
 
 function you_lose() {
   cipher = answer
+  $("overlay_lose").show()
   $( ".bottom p" ).html(cipher);
   $(".main-container").append($lose).mousedown(function() {
-  $(".overlay").hide()
+  $(".overlay_lose").hide()
   });
 }
 
@@ -184,7 +218,7 @@ $("#submit").click(function() {
 
 $( "#new_game" ).click(new_game);
 $( "#main_guess" ).click(update_main_guess);
-// $( ".result" ).click($win.show);
+$( ".result" ).click($win.show);
 
 
 
@@ -201,7 +235,4 @@ $( "#main_guess" ).click(update_main_guess);
 
 // How can you access and manipulate properties of objects?
 //   in javascript there is the getObjectByID and similar functions. I opted for the easier jquery implementation here.
-
-
-
 
