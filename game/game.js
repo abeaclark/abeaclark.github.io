@@ -14,12 +14,21 @@
 
 // create a function called new game that clears out the wrong guesses, and runs the new random number function, etc.
 
+// GIPHY API
+
+
+var api_request = $.get("http://api.giphy.com/v1/gifs/random?q=win&api_key=dc6zaTOxFJmzC&limit=5");
+
+var win_img_ref = api_request.done(function(data) { data.data.fixed_height_downsampled_url});
+
+
+
 var answer = ""
 var main_guess = ""
 var cipher = ""
 var wrong_guesses = [];
 var current_guess = "";
-var $win = $('<div class="overlay result">YOU WIN!</div><div class="overlay shade"></div>');
+var $win = $('<div class="overlay result">YOU WIN!<div class="gif"><img src="' + win_img_ref + '"></div></div><div class="overlay shade"></div>');
 var $lose = $('<div class="overlay result">YOU LOSE!</div><div class="overlay shade"></div>');
 
 //Define an array of common idioms
@@ -175,7 +184,7 @@ $("#submit").click(function() {
 
 $( "#new_game" ).click(new_game);
 $( "#main_guess" ).click(update_main_guess);
-$( ".result" ).click($win.show);
+// $( ".result" ).click($win.show);
 
 
 
@@ -194,9 +203,5 @@ $( ".result" ).click($win.show);
 //   in javascript there is the getObjectByID and similar functions. I opted for the easier jquery implementation here.
 
 
-// GIPHY API
 
-
-var api_request = $.get("http://api.giphy.com/v1/gifs/random?q=win&api_key=dc6zaTOxFJmzC&limit=5");
-api_request.done(function(data) { console.log("success got data", data); });
 
