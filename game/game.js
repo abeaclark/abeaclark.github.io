@@ -194,5 +194,9 @@ $( ".result" ).click($win.show);
 //   in javascript there is the getObjectByID and similar functions. I opted for the easier jquery implementation here.
 
 
+// GIPHY API
 
+
+var api_request = $.get("http://api.giphy.com/v1/gifs/random?q=win&api_key=dc6zaTOxFJmzC&limit=5");
+api_request.done(function(data) { console.log("success got data", data); });
 
