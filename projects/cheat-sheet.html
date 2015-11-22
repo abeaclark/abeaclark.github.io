@@ -1,0 +1,121 @@
+<html>
+<head>
+  <title>Javascript Objects and Prototypes Cheatsheet</title>
+  <link rel="stylesheet" type="text/css" href="cheat-sheet.css">
+</head>
+<body>
+  <div class="header-background"></div>
+  <div class="outer_container">
+    <header class="">
+      Javascript Objects and Prototypes Cheatsheet
+    </header>
+
+    <div class="main_container">
+      <section class="subject">
+        <span class="title">
+          Defining Objects
+        </span>
+
+        <pre class="prettyprint">
+            var rufus = {
+              name: "Dog",
+              color: "Black",
+              age: 2,
+              owners: ["Jason", "Jenny"]
+              description: function() {
+                console.log(this.age + "year old" + this.color + this.name);
+                }
+          }
+        </pre>
+
+        <ul class="subtext">
+          <li>An object looks like a variable, except that the object is surrounded by curly brackets and can hold more than one piece of data</li>
+
+          <li>Properties of the object come in pairs: the name of the property (name, color, age, etc.) and the value associated with each property ("Dog", "Black", etc.)</li>
+
+          <li>Properties can be single values, arrays, other objects, or functions</li>
+        </ul>
+
+      </section>
+
+      <section class="subject">
+        <span class="title">
+          Access Object Properties
+        </span>
+        <pre class="prettyprint">
+          rufus.name    // => "Dog"
+          rufus.color    // => "Black"
+          rufus["age"]    // => 2
+          rufus.description() // => "2 year old Black Dog"
+        </pre>
+
+        <ul class="subtext">
+          <li>Properties can be accessed through dot notation or bracket notation</li>
+          <li>Functions should be followed by empty parentheses when they are called</li>
+        </ul>
+
+      </section>
+
+      <section class="subject">
+        <span class="title">
+          Constructors
+        </span>
+        <pre class="prettyprint">
+          function Vehicle(make, model, color, year) {
+            this.make = make;
+            this.model = model;
+            this.color = color;
+            this.year = year;
+            }
+
+            var car1 = new Vehicle("Toyota", "Camry", "Black", 1998)
+
+            car1.model // => "Camry"
+
+            car1.model = "Corolla"
+
+            car1.model // => "Corolla"
+        </pre>
+
+        <ul class="subtext">
+          <li>Constructors create a template that you can use to make multiple instances of an object with the same properties</li>
+          <li>The "new" keyword allows you to create a new instance of "Vehicle"</li>
+          <li>Notice that "Vehicle" is capitalized to notate its role as a constructor</li>
+          <li>Properties can be changed using dot notation and assigning a new value</li>
+        </ul>
+
+      </section>
+
+      <section class="subject">
+        <span class="title">
+          Prototypes
+        </span>
+        <pre class="prettyprint">
+          var car2 = new Vehicle("Honda", "Accord", "Blue", 2009)
+          var car3 = new Vehicle("Dodge", "Dart", "Gray", 2010)
+
+          Vehicle.prototype.wheels = 4;
+
+          car2.wheels // => 4
+          car3.wheels // => 4
+        </pre>
+
+        <ul class="subtext">
+          <li>Prototypes allow you to add properties to constructors that will apply to all objects of that type</li>
+          <li>In the example above, to add a property globally, instead of adding it to each individually, we add it to the prototype with a default value (this may also be null)</li>
+          <li>Prototypes also save the computer processing power because instead of needing to define all of the properties (especially if they are functions) for all of the instances of the constructor, it can instead just save them in the prototype and reference that when called</li>
+
+        </ul>
+
+      </section>
+
+    </div> <!-- End main container -->
+
+    <footer>
+      Copyright 2015
+    </footer>
+  </div> <!-- End outer container -->
+  <div class="footer-background"></div>
+</body>
+</html>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
