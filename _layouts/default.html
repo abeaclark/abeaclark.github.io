@@ -1,0 +1,37 @@
+---
+navigation:
+- text: Home
+  url: /
+- text: Portfolio
+  title: TBU
+  url: /portfolio.html
+- text: Blog
+  title: TBU
+  url: /blog.html
+- text: Contact
+  title: TBU
+  url: /contact.html
+
+---
+
+<!DOCTYPE html>
+
+
+
+<script src="../js/application.js"></script>
+
+
+<html>
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+        {{ content }}
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

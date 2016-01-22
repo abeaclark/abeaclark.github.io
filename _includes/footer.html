@@ -1,0 +1,36 @@
+
+<footer class="site-footer">
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <div class="navbar-header center">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse center">
+        <ul class="nav nav-justified ">
+          {% for link in site.navigation %}
+            <li {% if page.url == link.url or (page.is_post and link.url == '/blog.html' ) %}class="active"{% endif %}>
+              <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a>
+            </li>
+          {% endfor %}
+
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+
+  </nav>
+
+</footer>
+
+
+
+<!--           <li><a class='active' href="/">Home</a></li>
+          <li><a class='active' href="/portfolio">Portfolio</a></li>
+          <li><a class='active' href="/blog">Blog</a></li>
+          <li><a class='active' href="/contact">Contact</a></li> -->
+
