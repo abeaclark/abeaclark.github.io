@@ -13,6 +13,7 @@ description: This is the description
 url: "http://abeclark.com"
 twitter_username: abe_clark
 github_username:  abeaclark
+permalink: none
 
 sass:
     sass_dir: _sass
@@ -39,4 +40,9 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+# extensions: [fenced_code_blocks]
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
