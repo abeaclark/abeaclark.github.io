@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div id="navbar" class="collapse navbar-collapse center">
+      <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav nav-justified ">
           {% for link in site.navigation %}
             <li {% if page.url == link.url or (page.is_post and link.url == '/blog.html' ) %}class="active"{% endif %}>
