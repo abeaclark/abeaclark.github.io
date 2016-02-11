@@ -24,9 +24,9 @@ navigation:
   - text: Portfolio
     title: TBU
     url: /portfolio.html
-  - text: Blog
-    title: TBU
-    url: /blog.html
+  # - text: Blog
+  #   title: TBU
+  #   url: /blog.html
   - text: Contact
     title: TBU
     url: /contact.html

@@ -6,6 +6,23 @@
 // import bootstrap
 @import "bootstrap";
 
+$primary: #c0dfd9;
+$secondary: white;
+$tertiary: #b3c2bf;
+$dark: #3b3a36;
+
+.portfolio_photo {
+  width: 200px;
+}
+
+
+a {
+  color: $dark;
+}
+
+.excerpt {
+  color: tertiary;
+}
 
 .container {
   width: 95%;
@@ -14,6 +31,7 @@
 
 body {
   margin: 30px 0 70px 0;
+  background-color: $secondary;
 }
 
 
@@ -39,45 +57,87 @@ body {
 }
 
 .nav a {
-  color: white;
+  color: $secondary;
   font-size: 1.2em;
 }
 
 .accent, .accent a {
-  color: #666666;
+  color: $dark;
   font-size: 1.2em;
 }
 
 .nav a:hover {
-  color: black;
+  color: $dark;
   font-size: 1.2em;
 }
 
 .center {
   text-align: center;
+  float: none;
 }
 
 .navbar {
-  background-color: #666666;
+  background-color: $dark;
 }
 
 .accent {
-  color: #666666;
+  color: $dark;
   font-size: 1.2em;
 }
 
 .contact_border {
-  border: solid 2px gray;
+  border: solid 6px $tertiary;
   width: 50%;
   min-width: 320px;
   min-height: 40vh;
 }
 
 .active {
-  background-color: #777777;
+  background-color: $secondary;
+  a {
+    color: $dark;
+  }
+
 }
 
 .post-meta {
   font-size: 1em;
   font-weight: bold;
+}
+
+navbar, navbar-default, navbar-fixed-bottom {
+  border: 0px;
+  padding: none;
+}
+
+.thumbnail {
+  border: solid 6px $tertiary;
+}
+
+.border-left {
+  text-align: left;
+  border-left: solid 3px $tertiary;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none
+}
+
+.carousel {
+  border: 0;
+  box-shadow: 0 !important;
+}
+
+.portfolio_photo {
+  max-height: 400px;
+}
+
+.item {
+  height: 90vh;
+  border: 2px 2px;
+}
+
+.portfolio_container {
+  height: 90vh;
 }
