@@ -130,7 +130,10 @@ navbar, navbar-default, navbar-fixed-bottom {
 }
 
 .portfolio_photo {
-  max-height: 400px;
+max-height: 70vh;
+max-width: 100%;
+width: auto;
+height: auto;
 }
 
 .item {
