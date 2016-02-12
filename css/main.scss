@@ -84,7 +84,7 @@ body {
 .contact_border {
   border: solid 6px $tertiary;
   width: 50%;
-  min-width: 320px;
+  min-width: 300px;
   min-height: 40vh;
 }
 
@@ -156,7 +156,7 @@ height: auto;
   padding: 10px;
 }
 
-.portfolio_tab {
+#portfolio_tab {
   position: fixed;
   top: 0;
   height: 5vh;
@@ -189,4 +189,13 @@ li {
 
 hr {
   margin: 0px 0 0px 0;
+  border: gray 1px solid;
+}
+
+.portfolio_subtext {
+  color: $tertiary;
+}
+
+.toggle {
+  display: none;
 }
